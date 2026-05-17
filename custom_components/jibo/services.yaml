@@ -1,7 +1,17 @@
 say:
-  description: Make Jibo Say Something
+  description: Make a Jibo robot say something.
   fields:
     message:
-      description: Text to speak
-      example: "Hello Home Assistant"
+      description: The text to speak.
+      example: "Hello, Home Assistant!"
       required: true
+      selector:
+        text:
+    robot:
+      description: >
+        Name of the robot to speak on. Leave empty to speak on all configured
+        Jibo robots.
+      example: "Living Room Jibo"
+      required: false
+      selector:
+        text:
