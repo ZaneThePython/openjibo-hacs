@@ -1,9 +1,12 @@
 import aiohttp
 import voluptuous as vol
 from homeassistant.core import HomeAssistant, ServiceCall
+from homeassistant.helpers import config_validation as cv
 import logging
 
 from .const import DOMAIN, PLATFORMS
+
+CONFIG_SCHEMA = cv.config_entry_only_config_schema(DOMAIN)
 
 _LOGGER = logging.getLogger(__name__)
 
